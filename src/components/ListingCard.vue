@@ -3,11 +3,11 @@
       <div class="mb-4 relative">
         <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
             <slide v-for="(pic, index) in listing.img" :key="index">
-                <img v-bind:src="pic" class="max-h-full">
+              <img :src="pic" :alt="index"/>
             </slide>
         </carousel>
-        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="prevSlide">
-                <i class="fa fa-chevron-left fa-2x"></i>
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="prevSlide">
+            <i class="fa fa-chevron-left fa-2x"></i>
             </button>
             <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="nextSlide">
                 <i class="fa fa-chevron-right fa-2x"></i>

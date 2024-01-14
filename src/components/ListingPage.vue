@@ -6,7 +6,7 @@
         <div class="relative">
             <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
                 <slide v-for="(pic, index) in listingData.img" :key="index">
-                    <img v-bind:src="pic" class="max-h-full">
+                    <img :src="pic" class="max-h-full">
                 </slide>
             </carousel>
             <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="prevSlide">
