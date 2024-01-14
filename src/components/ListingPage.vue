@@ -18,14 +18,16 @@
             </button>
           </div>
   
-          <div class="mt-6 mb-4 border-t-2 border-b-2 border-black py-2">
+          <div class="mt-6 mb-4 border-t-2 border-b-2 border-black py-2">  
             <div class="flex justify-between items-center">
               <h3 class="font-bold text-lg md:text-2xl">{{ formatPrice(listingData.price) }}</h3>
               <div :class="{'bg-yellow-400': listingData.type === 'rent', 'bg-green-500': listingData.type === 'sale'}" class="rounded-md text-white py-1 px-3 md:px-6 md:py-2 text-sm md:text-md opacity-90">
                 {{ listingData.type === 'rent' ? 'For Rent' : 'For Sale' }}
               </div>
             </div>
-            <h3 class="text-sm md:text-lg italic mb-3 text-gray-700">{{ listingData.city }}</h3>
+            <h3 class="text-sm md:text-lg italic text-gray-700">{{ listingData.city }}</h3>
+            <h4 class="text-md mb-3 text-black"><span class="font-semibold">Property ID: </span>{{ listingData.listing_id }}</h4>
+            <p class="text-md md:text-lg font-bold  ">Description:</p>
             <p class="mb-4 text-md md:text-lg">{{ listingData.description }}</p>
             <div class="icon-container flex text-sm md:text-lg justify-start space-x-4 mt-2 text-gray-800">
               <span class="icon"><i class="fa fa-bed" aria-hidden="true"></i> {{ listingData.bedrooms }} Bedrooms</span>
