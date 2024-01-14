@@ -1,0 +1,82 @@
+<template>
+    <div class="bg-white shadow-md border-2 border-gray-200 flex-col flex rounded-lg">
+      <div class="mb-4 relative">
+        <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
+            <slide v-for="(pic, index) in listing.img" :key="index">
+                <img v-bind:src="pic" class="max-h-full">
+            </slide>
+        </carousel>
+        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="prevSlide">
+                <i class="fa fa-chevron-left fa-2x"></i>
+            </button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="nextSlide">
+                <i class="fa fa-chevron-right fa-2x"></i>
+            </button>
+      </div>
+      <div class="px-2 md:px-6 md:pb-2 text-sm md:text-base">
+        <div class="flex flex-row items-center justify-between space-x-1 mb-2 md:mb-0">
+          <h3 class="font-semibold text-sm md:text-xl">{{ formatPrice(listing.price) }}</h3>
+          <div :class="{'bg-yellow-400': listing.type === 'rent', 'bg-green-500': listing.type === 'sale'}" class="rounded-full text-center text-black   text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1 opacity-90">
+            {{ listing.type === 'rent' ? 'For Rent' : 'For Sale' }}
+          </div>
+        </div>
+        <h4 class="text-md italic mb-3 text-gray-700">{{ listing.city }}</h4>
+        <p class="text-black text-md text-justify hidden md:block">{{ listing.description }}</p>
+        <div div class="icon-container flex mt-4 text-gray-800 flex-col md:flex-row text-sm md:text-base">
+          <span class="icon px-1"><i class="fa fa-bed" aria-hidden="true"></i> {{ listing.bedrooms }} Bedrooms</span>
+          <span class="icon px-1"><i class="fa fa-shower" aria-hidden="true"></i> {{ listing.bathrooms }} Bathrooms</span>
+          <span class="icon px-1"><i class="fa fa-expand" aria-hidden="true"></i> {{ listing.floor_area }} sqm</span>
+        </div>
+      </div>
+      <button
+        class="mx-4 my-2 py-1 md:py-2 bg-yellow-800 text-white text-md md:text-lg rounded-lg"
+        @click="goToListingPage"
+      >
+        See more
+      </button>
+    </div>
+  </template>
+  
+  <script setup>
+    import { useRouter } from 'vue-router';
+    
+    const props = defineProps({
+      listing: Object
+    });
+    const router = useRouter();
+    
+    const goToListingPage = () => {
+      router.push({ name: 'ListingPage', params: { listingNum: props.listing.listing_num } });
+    };
+    const formatPrice = (price) => {
+      // Use toLocaleString to format the price with comma and period
+      return price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'PHP'
+      });
+    };
+  </script>
+<script>
+import { Carousel, Slide } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
+export default {
+  name: 'ListingCard',
+  props:{
+    listing: Object
+  },
+  components: {
+    Carousel,
+    Slide
+  },
+  methods:{
+    nextSlide() {
+            this.$refs.myCarousel.next();
+        },
+        prevSlide() {
+            this.$refs.myCarousel.prev();
+        },
+  }
+
+}
+</script>
+  
