@@ -8,7 +8,7 @@
         "bathrooms": 2,
         "floor_area": 200,
         "city": "Alabang, Muntinlupa City",
-        "img": ["../src/assets/aava_170/1.jpg","../src/assets/aava_170/2.jpg","../src/assets/aava_170/3.jpg","../src/assets/aava_170/4.jpg","../src/assets/aava_170/5.jpg","../src/assets/aava_170/6.jpg","../src/assets/aava_170/7.jpg"],
+        "img": ["./src/assets/aava_170/1.jpg","../src/assets/aava_170/2.jpg","../src/assets/aava_170/3.jpg","../src/assets/aava_170/4.jpg","../src/assets/aava_170/5.jpg","../src/assets/aava_170/6.jpg","../src/assets/aava_170/7.jpg"],
         "type":"rent",
         "features":["Swimming Pool","Car Garage","Water Heater","High Ceiling"],
         "est_malls":["Alabang Town Center","Molito Lifestyle Center"],
