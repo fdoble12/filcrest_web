@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import ListingPage from '../components/ListingPage.vue';
 import Home from '../components/Home.vue';
 import About from '../components/About.vue'
+import BookingForm from '../components/BookingForm.vue'
 const routes = [
   {
     path: '/',
@@ -18,8 +19,13 @@ const routes = [
     path:'/about',
     name:'About',
     component: About
+  },
+  {
+    path:'/bookViewing',
+    name:'Viewing',
+    component:BookingForm
   }
-];
+];  
 
 const router = createRouter({
     history: createWebHistory('/'),

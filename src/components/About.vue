@@ -5,7 +5,7 @@
 <template>
     <Navbar/>
     <div id="about-page" class="py-2 px-4 min-h-[100vh]">
-        <section class="container mx-auto px-10 md:px-20 pt-12 md:pt-20 w-full md:max-w-[100vh]">
+        <section class="container mx-auto px-10 md:px-20 pt-12 md:pt-20 pb-4 md:pb-8 w-full md:max-w-[100vh]">
             <h2 class="text-xl md:text-2xl text-black font-semibold py-4">ABOUT US</h2>
             <h3 class="text-lg md:text-xl font-bold pb-4">Professional Background</h3>
             <p class="text-justify">

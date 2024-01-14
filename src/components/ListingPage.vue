@@ -48,7 +48,10 @@
                 </div>
             </div>
         </div>
-        <button class="mb-2 px-2 py-2 md:px-4 md:py-3 shadow-xl shadow-inner text-black text-sm bg-yellow-600 hover:bg-yellow-800 font-luxora">BOOK A VIEWING</button>     
+        <button class="mb-2 px-2 py-2 md:px-4 md:py-3 shadow-xl shadow-inner text-black text-sm bg-yellow-600 hover:bg-yellow-800 font-luxora"
+        @click="openGoogleForm">
+            BOOK A VIEWING
+        </button>     
 
       </section>
     </div>
@@ -101,6 +104,10 @@
                 style: 'currency',
                 currency: 'PHP'
             });
+        },
+        openGoogleForm() {
+        // Replace the Google Form URL with your actual URL
+        window.open('/bookViewing');
         }
     },
     components: {
