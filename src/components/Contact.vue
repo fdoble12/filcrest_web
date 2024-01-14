@@ -4,10 +4,14 @@
         <div class="flex flex-col items-center">
           <h2 class="text-md md:text-lg py-2 text-yellow-600 font-semibold">PHONE</h2>
           <p class="text-white sm:text-sm md:text-[15px]">+63 917 835 0951</p>
+          <p class="text-white sm:text-sm md:text-[15px]">+63 917 505 5895</p>
+
         </div>
         <div class="flex flex-col items-center">
           <h2 class="text-md md:text-lg py-2 text-yellow-600 font-semibold">EMAIL</h2>
           <p class="text-white text-sm md:text-[15px]">angie_doble@yahoo.com</p>
+          <p class="text-white text-sm md:text-[15px]">francisco_doble@yahoo.com</p>
+
         </div>
         <div class="flex flex-col items-center">
           <h2 class="text-md md:text-lg py-2 text-yellow-600 font-semibold">FOLLOW</h2>
