@@ -46,7 +46,8 @@
     const router = useRouter();
     
     const goToListingPage = () => {
-      router.push({ name: 'ListingPage', params: { listingNum: props.listing.listing_num } });
+      // Use Vue Router to navigate to ListingPage with listing_id as a parameter
+      router.push({ name: 'ListingPage', params: { listingId: props.listing.listing_id } });
     };
     const formatPrice = (price) => {
       // Use toLocaleString to format the price with comma and period

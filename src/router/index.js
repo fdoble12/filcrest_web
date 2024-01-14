@@ -10,7 +10,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/listing/:listingNum',
+    path: '/listing/:listingId',
     name: 'ListingPage',
     component: ListingPage,
     props: true // This allows us to pass the route parameters as props to the component
