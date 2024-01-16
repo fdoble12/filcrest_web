@@ -4,7 +4,7 @@
         <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
             <slide v-for="(pic, index) in listing.img" :key="index">
               <div>
-                <img :src="pic" :alt="index"/>
+                <img :src="pic" :alt="index" />
               </div>
             </slide>
         </carousel>
@@ -16,6 +16,8 @@
             </button>
       </div>
       <div class="px-2 md:px-6 md:pb-2 text-sm md:text-base">
+        <h3 class="font-semibold text-sm md:text-xl py-1 border-b-2 border-black mb-1">{{ listing.title }}</h3>
+
         <div class="flex flex-row items-center justify-between space-x-1 mb-2 md:mb-0">
           <h3 class="font-semibold text-sm md:text-xl">{{ formatPrice(listing.price) }}</h3>
           <div :class="{'bg-yellow-400': listing.type === 'rent', 'bg-green-500': listing.type === 'sale'}" class="rounded-full text-center text-black   text-xs md:text-[16px] px-2 py-1 md:px-3 md:py-1 opacity-90">
