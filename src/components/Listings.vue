@@ -3,7 +3,7 @@
       <div class="container mx-auto max-w-[150vh]">
         <h2 class="text-xl md:text-2xl text-black font-semibold mb-4">PROPERTIES</h2>
         <!-- Use v-if to conditionally render ListingCard when data is available -->
-        <div v-if="listings.length > 0" class="grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-1 lg:grid-cols-3">
+        <div v-if="listings.length > 0" class="grid gap-4 md:gap-6 grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           <ListingCard
             v-for="(listing, index) in listings"
             :key="index"

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white shadow-md border-2 border-gray-200 flex flex-col rounded-lg">
+    <div class="bg-white shadow-md border-2 border-gray-200 flex flex-col justify-between rounded-lg">
       <div class="mb-4 relative">
         <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
             <slide v-for="(pic, index) in listing.img" :key="index">
