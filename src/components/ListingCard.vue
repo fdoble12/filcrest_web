@@ -1,9 +1,11 @@
 <template>
-    <div class="bg-white shadow-md border-2 border-gray-200 flex-col flex rounded-lg">
+    <div class="bg-white shadow-md border-2 border-gray-200 flex flex-col rounded-lg">
       <div class="mb-4 relative">
         <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
             <slide v-for="(pic, index) in listing.img" :key="index">
-              <img :src="pic" :alt="index"/>
+              <div>
+                <img :src="pic" :alt="index"/>
+              </div>
             </slide>
         </carousel>
             <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="prevSlide">
@@ -24,9 +26,10 @@
         <h4 class="text-md font-semibold mb-2 text-gray-700">Property ID: {{ listing.listing_id }}</h4>
         <p class="text-black text-md text-justify hidden md:block">{{ listing.description }}</p>
         <div div class="icon-container flex mt-4 text-gray-800 flex-col md:flex-row text-sm md:text-base">
-          <span class="icon px-1"><i class="fa fa-bed" aria-hidden="true"></i> {{ listing.bedrooms }} Bedrooms</span>
-          <span class="icon px-1"><i class="fa fa-shower" aria-hidden="true"></i> {{ listing.bathrooms }} Bathrooms</span>
-          <span class="icon px-1"><i class="fa fa-expand" aria-hidden="true"></i> {{ listing.floor_area }} sqm</span>
+          <span class="icon px-1"><i class="fa fa-bed" aria-hidden="true"></i> {{ listing.bedrooms }}</span>
+          <span class="icon px-1"><i class="fa fa-shower" aria-hidden="true"></i> {{ listing.bathrooms }}</span>
+          <span class="icon px-1"><i class="fa fa-home" aria-hidden="true"></i> {{ listing.floor_area }} sqm</span>
+          <span class="icon px-1"><i class="fa fa-expand" aria-hidden="true"></i> {{ listing.lot_area }} sqm</span>
         </div>
       </div>
       <button

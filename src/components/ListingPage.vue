@@ -32,7 +32,8 @@
             <div class="icon-container flex text-sm md:text-lg justify-start space-x-4 mt-2 text-gray-800">
               <span class="icon"><i class="fa fa-bed" aria-hidden="true"></i> {{ listingData.bedrooms }} Bedrooms</span>
               <span class="icon"><i class="fa fa-shower" aria-hidden="true"></i> {{ listingData.bathrooms }} Bathrooms</span>
-              <span class="icon"><i class="fa fa-expand" aria-hidden="true"></i> {{ listingData.floor_area }} sqm</span>
+              <span class="icon"><i class="fa fa-home" aria-hidden="true"></i> {{ listingData.floor_area }} sqm</span>
+              <span class="icon"><i class="fa fa-expand" aria-hidden="true"></i> {{ listingData.lot_area }} sqm</span>
             </div>
             <div class="py-3 grid grid-flow-col gap-8 justify-stretch">
               <div>
