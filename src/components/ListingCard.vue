@@ -27,7 +27,7 @@
         <h4 class="text-md italic text-gray-700">{{ listing.city }}</h4>
         <h4 class="text-md font-semibold mb-2 text-gray-700">Property ID: {{ listing.listing_id }}</h4>
         <p class="text-black text-md text-justify hidden md:block">{{ listing.description }}</p>
-        <div div class="icon-container flex mt-4 text-gray-800 flex-col md:flex-row text-sm md:text-base">
+        <div div class="icon-container flex mt-4 text-gray-800 flex-row text-sm md:text-base">
           <span class="icon px-1"><i class="fa fa-bed" aria-hidden="true"></i> {{ listing.bedrooms }}</span>
           <span class="icon px-1"><i class="fa fa-shower" aria-hidden="true"></i> {{ listing.bathrooms }}</span>
           <span class="icon px-1"><i class="fa fa-home" aria-hidden="true"></i> {{ listing.floor_area }} sqm</span>
