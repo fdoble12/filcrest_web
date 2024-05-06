@@ -4,7 +4,7 @@
         <carousel ref="myCarousel" :itemsToShow="1" :wrapAround="true" :autoplay="false">
             <slide v-for="(pic, index) in listing.img" :key="index">
               <div>
-                <img :src="pic" :alt="index" />
+                <img :src="pic" :alt="index" class="max-h-[320px]"/>
               </div>
             </slide>
         </carousel>
@@ -86,4 +86,3 @@ export default {
 
 }
 </script>
-  
