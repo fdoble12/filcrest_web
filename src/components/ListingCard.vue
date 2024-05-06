@@ -8,10 +8,10 @@
               </div>
             </slide>
         </carousel>
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="prevSlide">
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-800 text-xl px-6 hover:text-gray-400 bg-gray-200 bg-opacity-50 rounded-full" @click="prevSlide">
             <i class="fa fa-chevron-left fa-2x"></i>
             </button>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-xl px-6 hover:text-gray-400" @click="nextSlide">
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-800 text-xl px-6 hover:text-gray-400 bg-gray-200 bg-opacity-50 rounded-full" @click="nextSlide">
                 <i class="fa fa-chevron-right fa-2x"></i>
             </button>
       </div>
