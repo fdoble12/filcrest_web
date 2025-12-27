@@ -13,7 +13,7 @@ export const getListings = async () => {
       floor_area,
       description,
       listing_type_id,
-      property_photos (
+      property_photos:photos_id (
         urls
       )
     `)
@@ -21,7 +21,6 @@ export const getListings = async () => {
 
   if (error) throw error;
 
-  // 🔥 Normalize for ListingCard
   return data.map(l => ({
     listing_id: l.listing_id,
     title: l.title,
@@ -33,11 +32,10 @@ export const getListings = async () => {
     description: l.description,
     type: l.listing_type_id === 1 ? 'sale' : 'rent',
 
-    // IMPORTANT PART 👇
-    img: l.property_photos?.[0]?.urls || []
+    // Always return array
+    img: l.property_photos?.urls || []
   }));
 };
-
 
 export const getListingById = async (listingId) => {
   const { data, error } = await supabase
